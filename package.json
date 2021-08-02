@@ -13,6 +13,8 @@
     "firebase-admin": "^9.11.0",
     "firebase-functions": "^3.14.1",
     "vue": "^2.6.11",
+    "vue-router": "^3.5.2",
+    "vuetify": "^2.5.8",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

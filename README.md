@@ -3,7 +3,7 @@ Submitted by: Ana Carolina Arellano
 Date: 02/08/2021
 ----------
 #### **Description of what the project does**
-This version of the Warehouse app that I developed during term 3 makes use of firebase in order to store the data of the app in the cloud. The information from all the products is now stored in Firebase and the app retrieves it in order to display it in the "customer" role. Further more, the information entered in the "sales" role is now stored in the cloud too, so the local server implemented in the past submission is no longer used. 
+This version of the Warehouse app includes new routes, in the main one ("/") you can find charts made with data retrieved from the app. There is also the new route "/admin" that takes you to an admin page, which has a form to create data that is saved in one Model and retrieved from the cloud data store.
 
 #### **Download/Install**
 ---------
@@ -15,11 +15,9 @@ This version of the Warehouse app that I developed during term 3 makes use of fi
 
 #### **How to use**
 --------
-##### Client
-- From the directory of 'WarehouseProject', go to the directory of 'Client'
 - Run the command ´vue ui´ to run the project
 - In your browser go to: http://localhost:8000
-- Go to tasks -> client -> click on 'run task'
+- Go to tasks -> serve -> click on 'run task'
 - Click on 'Open App'
 - The App will open at http://localhost:4000/
 
