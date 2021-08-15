@@ -24,12 +24,16 @@
 <script>
 // typical Vue component controller defined and registered here
 import Controller from "@/mixins/controller";
+import myHeader from "@/components/Header";
 
 //App Controller class
 class AppController extends Controller {
   constructor(name, subComponentList = []) {
     super(name, subComponentList);
     this.vm = {};
+    this.components = {
+      myHeader
+    }
   }
 }
 
@@ -37,16 +41,6 @@ class AppController extends Controller {
 export default new AppController("WarehouseApp");
 </script>
 <style>
-/**
-    * CSS Styles for VFS Demo App
-    *
-    * @Copyright 2014-2015, Vancouver Film School, In cooperation with Kibble Games Inc.
-    * @author: Scott Henshaw
-    * @Contributor: Clinton Ramonida, Ana Carolina Arellano Alvarez
-    */
-
-/* DEFAULTS */
-
 html {
   font-size: 100%;
 }

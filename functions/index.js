@@ -1,39 +1,33 @@
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
+const functions = require('firebase-functions')
+const admin = require('firebase-admin')
 admin.initializeApp()
 
-exports.aggregate = functions.https.onCall((snapshot, context) => {
-  const data = snapshot.data();
-  const docId = context.params.documentId;
 
-  //my code here
-
-  return { id: docId, payload: data };
-});
-
-exports.onTheFly = functions.firestore
-  .document("telemetry/telemetry")
-  .onCreate((user, context) => {
-    //pull id from the context
-    console.log(user)
-    console.log(context)
-  });
-/*exports.onTheFly = functions.firestore
-  .document("telemetry/telemetry")
-  .onCreate((user, context) => {
-    //pull id from the context
-    console.log(user)
-    console.log(context)
-  });*/
-
-exports.getAggregatedData = functions.https.onRequest((request, response) => {
-  admin.firestore().doc("telemetry/telemetry").get()
-  .then(snapshot => {
+//function that is triggered every time that a new document is added in the "sales" collection
+exports.salesObserver = functions.firestore
+  .document('sales/{salesId}')
+  .onCreate((snapshot, context) => {
     const data = snapshot.data()
+    const docId = context.params.documentId
+
+    //display the data that was added in the document
     console.log(data)
-    response.send(data)
+    return { id: docId, payload: data }
   })
-  .catch(error => {
-    response.status(500).send(error)
-  })
-});
+
+//function to retrieve the data from an existing form
+//Id is currently hardcoded
+exports.getForm = functions.https.onRequest((request, response) => {
+  admin
+    .firestore()
+    .doc(`sales/3`)
+    .get()
+    .then(snapshot => {
+      const data = snapshot.data()
+      console.log(data)
+      response.send(data)
+    })
+    .catch(error => {
+      response.status(500).send(error)
+    })
+})
