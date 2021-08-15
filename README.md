@@ -1,9 +1,11 @@
 ### **PG20 T4 Cloud Computing - A3: Telemetry Admin System**
 Submitted by: Ana Carolina Arellano
-Date: 02/08/2021
+Date: 14/08/2021
 ----------
 #### **Description of what the project does**
-This version of the Warehouse app includes new routes, in the main one ("/") you can find charts made with data retrieved from the app. There is also the new route "/admin" that takes you to an admin page, which has a form to create data that is saved in one Model and retrieved from the cloud data store.
+This version of the Warehouse app includes new routes, in the main one ("/") and a new route "/admin" 
+that takes you to an admin page, which has a form to create data and send it to the cloud. It is also possible to 
+retrieve data from the cloud data store. and display it.
 
 #### **Download/Install**
 ---------
@@ -15,6 +17,12 @@ This version of the Warehouse app includes new routes, in the main one ("/") you
 
 #### **How to use**
 --------
+##### Cloud functions
+- In your terminal change directory to be inside the functions folder of the project
+- Run the command "firebase emulators:start --only functions"
+- It will give you links for the results, you can copy and paste them on the browser o run in terminal "curl ..."
+
+##### Vue
 - Run the command ´vue ui´ to run the project
 - In your browser go to: http://localhost:8000
 - Go to tasks -> serve -> click on 'run task'
