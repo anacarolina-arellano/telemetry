@@ -20,7 +20,7 @@
           label="Client's Name"
           :rules="['Required']"
         ></v-text-field>
-        
+
         <h3>Product to be picked</h3>
         <v-row class="my-row">
           <v-text-field
@@ -70,32 +70,28 @@
   </section>
 </template>
 <script>
-import Controller from "@/mixins/controller";
+import Controller from '@/mixins/controller'
 
 class Sales extends Controller {
-  constructor(name, subComponentList = []) {
-    super(name, subComponentList);
+  constructor (name, subComponentList = []) {
+    super(name, subComponentList)
     this.vm = {
       newFormID: 0,
-      employeeName: "",
-      clientName: "",
-      
+      employeeName: '',
+      clientName: '',
+
       productId: 0,
       quantity: 0,
       productId2: 0,
       quantity2: 0,
 
       formID: 0
-    };
-    
+    }
   }
 
-  submit() {
+  submit () {
     //check that at least one product was added
-    if (
-      this.employeeName &&
-      this.clientName
-    ) {
+    if (this.employeeName && this.clientName) {
       if (
         (this.productId && this.quantity) ||
         (this.productId2 && this.quantity2)
@@ -107,34 +103,32 @@ class Sales extends Controller {
           productId: this.productId,
           quantity: this.quantity,
           productId2: this.productId2,
-          quantity2: this.quantity2,
-        };
-        this.$store.dispatch("submitSalesForm", newSale);
+          quantity2: this.quantity2
+        }
+        this.$store.dispatch('submitSalesForm', newSale)
 
-        this.clear();
+        this.clear()
       } else {
-        alert("At least one product should be registered");
+        alert('At least one product should be registered')
       }
     } else {
-      alert("Please fill the requiered fields");
+      alert('Please fill the requiered fields')
     }
   }
-  clear() {
-    this.newFormID = 0;
-    this.employeeName = "";
-    this.clientName = "";
-    this.productId = 0;
-    this.quantity = 0;
-    this.productId2 = 0;
-    this.quantity2 = 0;
+  clear () {
+    this.newFormID = 0
+    this.employeeName = ''
+    this.clientName = ''
+    this.productId = 0
+    this.quantity = 0
+    this.productId2 = 0
+    this.quantity2 = 0
   }
-  search()
-  {
-    this.$store.dispatch("searchForm");
+  search () {
+    this.$store.dispatch('searchForm')
   }
 }
-export default new Sales("Sales");
-
+export default new Sales('Sales')
 </script>
 
 <style scoped>
