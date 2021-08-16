@@ -55,7 +55,7 @@
 
     <div class="retrieve">
       <h2>Retrieve a form from Firestore</h2>
-      <p>Enter a form ID (valid ones: 1, 100, 2)</p>
+      <p>Enter a form ID (working on terminal with curl http://localhost:5001/warehouseapp-288c9/us-central1/getForm)</p>
       <form>
         <v-text-field
           v-model="formID"

@@ -36,6 +36,14 @@ retrieve data from the cloud data store. and display it.
 #### **Comments**
 - The vue interface allows you to add a new document to firestore but right now the cloud function of salesObserver gets only triggered if a new document is added in that collection through the Firestore Emulator.
 
+#### **API KEYS**
+apiKey: 'AIzaSyAHAij4Xf0nEQoGYWd-aYNMNA3lCtEpX20',
+authDomain: 'warehouseapp-288c9.firebaseapp.com',
+  projectId: 'warehouseapp-288c9',
+  storageBucket: 'warehouseapp-288c9.appspot.com',
+  messagingSenderId: '1026739158294',
+  appId: '1:1026739158294:web:9164498e70ec7240cf2437'
+
 ## Built With
 * **Firebase** -  Cloud storage.
 * **Vue.js 2.0** - The web framework used.
