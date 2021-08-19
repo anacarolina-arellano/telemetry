@@ -1,6 +1,6 @@
-### **PG20 T4 Cloud Computing - A3: Telemetry Admin System**
+### **PG20 T4 Cloud Computing - A4: Telemetry Analytics System**
 Submitted by: Ana Carolina Arellano
-Date: 14/08/2021
+Date: 18/08/2021
 ----------
 #### **Description of what the project does**
 This version of the Warehouse app includes new routes, in the main one ("/") and a new route "/admin" 
@@ -10,7 +10,7 @@ retrieve data from the cloud data store. and display it.
 #### **Download/Install**
 ---------
  - Browse the demo link: [https://github.com/anacarolina-arellano/telemetry]
- - Clone the 'main' branch of repository into your machine
+ - Clone the 'assignment4' branch of repository into your machine
  - From the terminal go to the location where the repo was cloned
  - Change directory to locate yourself in the folder 'telemetry'
 
