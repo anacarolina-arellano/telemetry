@@ -3,14 +3,14 @@ Submitted by: Ana Carolina Arellano
 Date: 18/08/2021
 ----------
 #### **Description of what the project does**
-This version of the Warehouse app includes new routes, in the main one ("/") and a new route "/admin" 
-that takes you to an admin page, which has a form to create data and send it to the cloud. It is also possible to 
-retrieve data from the cloud data store. and display it.
+This version of the Warehouse app includes new routes, in the main one ("/") that takes you to an admin page, 
+which has a form to create data and send it to the cloud, and the ("/charts"). It is also possible to retrieve 
+data from the cloud data store and display through cloud functions in the emulator.
 
 #### **Download/Install**
 ---------
- - Browse the demo link: [https://github.com/anacarolina-arellano/telemetry]
- - Clone the 'assignment4' branch of repository into your machine
+ - Browse the demo link: [https://github.com/anacarolina-arellano/telemetry/tree/assignment4]
+ - Clone the 'assignment4' branch of the repository into your machine
  - From the terminal go to the location where the repo was cloned
  - Change directory to locate yourself in the folder 'telemetry'
 
