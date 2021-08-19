@@ -3,8 +3,8 @@ Submitted by: Ana Carolina Arellano
 Date: 18/08/2021
 ----------
 #### **Description of what the project does**
-This version of the Warehouse app includes new routes, in the main one ("/") and a new route "/admin" 
-that takes you to an admin page, which has a form to create data and send it to the cloud. It is also possible to 
+This version of the Warehouse app includes new routes, in the main one ("/") that takes you to an admin page, 
+which has a form to create data and send it to the cloud. It is also possible to 
 retrieve data from the cloud data store. and display it.
 
 #### **Download/Install**
