@@ -11,7 +11,12 @@ import VueFire from 'vuefire'
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  //INSERT KEYS HERE
+  apiKey: 'AIzaSyAHAij4Xf0nEQoGYWd-aYNMNA3lCtEpX20',
+authDomain: 'warehouseapp-288c9.firebaseapp.com',
+  projectId: 'warehouseapp-288c9',
+  storageBucket: 'warehouseapp-288c9.appspot.com',
+  messagingSenderId: '1026739158294',
+  appId: '1:1026739158294:web:9164498e70ec7240cf2437'
 }
 
 const funcURL = 'https://us-centrall-warehouseapp-288c9.cloudfunctions.net/'
