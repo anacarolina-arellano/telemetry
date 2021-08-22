@@ -9,12 +9,12 @@ import Router from 'vue-router';
 Vue.use( Router );
 
 import Home from '@/routes/Home.vue'
-import Admin from '@/routes/Admin.vue'
+import Charts from '@/routes/Charts.vue'
 
 
 export default new Router({
     routes: [
-        { path:"/",      name:"Home",  component: Home, props: { name: "Warehouse"} },
-        { path:"/admin", name:"Admin", component: Admin }
+        { path:"/",      name:"Admin",  component: Home, props: { name: "Warehouse"} },
+        { path:"/charts", name:"Charts", component: Charts }
     ]
 });

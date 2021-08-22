@@ -15,7 +15,7 @@ const { reactiveProp } = mixins
 // Below is a class defn using my Controller base class wrapper for Vue components
 // in this case used to implement Vue mixins
 class Chart extends Controller {
-
+   
     constructor( name, subComponentList ) {
         super( name, subComponentList );
         this.extends = Bar;

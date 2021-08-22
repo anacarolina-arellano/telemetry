@@ -163,11 +163,9 @@ input[type="button"]:focus {
 }
 
 .logo {
-  background-size: 100% 100%;
-  height: 130px;
-  width: 130px;
-  margin-left: 1em;
-  cursor: pointer;
+  padding-left: 25px;
+  margin-right: 70px;
+  width:130px;
 }
 
 .title {
