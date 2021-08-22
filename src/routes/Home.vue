@@ -125,7 +125,7 @@ class Sales extends Controller {
     this.quantity2 = 0
   }
   search () {
-    this.$store.dispatch('searchForm')
+    this.$store.dispatch('searchForm', this.formID)
   }
 }
 export default new Sales('Sales')

@@ -19,7 +19,7 @@ authDomain: 'warehouseapp-288c9.firebaseapp.com',
   appId: '1:1026739158294:web:9164498e70ec7240cf2437'
 }
 
-const funcURL = 'https://us-centrall-warehouseapp-288c9.cloudfunctions.net/'
+const funcURL = 'http://localhost:5001/warehouseapp-288c9/us-central1'
 // Initialize Firebase
 Firebase.initializeApp(firebaseConfig)
 const db = Firebase.firestore()
@@ -38,10 +38,10 @@ export default new Vuex.Store({
         })
     },
     //get the data from an existing form
-    getForm () {
-      Axios.post(`${funcURL}getForm`).then(data => {
-        
-        console.log(data)
+    getForm (state, formID) {
+      console.log(formID)
+      Axios.get(`${funcURL}/getForm?id=${formID}`).then(result => {
+        alert(JSON.stringify(result.data))
       })
     }
   },
@@ -54,6 +54,7 @@ export default new Vuex.Store({
 
     //search for an specific form  (will be implemented for A4)
     searchForm ({ commit }, formID) {
+      
       commit('getForm', formID)
     }
   },
