@@ -1,5 +1,6 @@
 <template>
   <div>
+      Heatmap
     <apexchart width="500" type="heatmap" :options="options" :series="series">
     </apexchart>
   </div>
@@ -10,7 +11,7 @@ export default {
   data: () => ({
     options: {
       chart: {
-        id: "vuechart-example",
+        id: "heat-map"
       },
       xaxis: {
         categories: ["Jun", "Jul", "Aug", "Sep"],
