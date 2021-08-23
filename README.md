@@ -23,8 +23,8 @@ data from the cloud data store and display through cloud functions in the emulat
 - In your web browser go to http://localhost:4001/firestore 
 - This is the emulator of firestore, I made a cloud function (salesObserver) that gets trigger every time a new document is added to the "sales" collection. To test it: In the firestore emulator create a new collection named 'sales', add a document with a numeric ID (for example 8), add some fields such as empName (string) and clientName (string). Once you have done this, in your terminal, where you ran the previous command you'll see that the data that was added to the collection gets printed. This is because of the cloud function.
 
-- Another function that I did was getForm. This one has direct access to the project's firestore, so in order to demonstatre how it works I "harcoded" it so it shows the data stores in the document with ID 3 of the 'sales' collection
-- To test this function, you have to be running the emulators (firebase emulators:start) or at least the emulator of the functions (firebase emulators:start --only functions), then, in another terminal run "curl http://localhost:5001/warehouseapp-288c9/us-central1/getForm" and you'll receive the data from the document 
+- Another cloud function that I did was getForm. This one has direct access to the project's firestore, so in order to demonstrate how it works you can enter a form ID and if it exists there will be an allert message with the information belonging to that form
+- To test this function, you have to be running the emulators (firebase emulators:start) or at least the emulator of the functions (firebase emulators:start --only functions), then, in another terminal run vue (instructions below) and send an id
 
 ##### Vue
 - Run the command ´vue ui´ to run the project
@@ -34,7 +34,8 @@ data from the cloud data store and display through cloud functions in the emulat
 - The App will open at http://localhost:4000/
 
 #### **Comments**
-- The vue interface allows you to add a new document to firestore but right now the cloud function of salesObserver gets only triggered if a new document is added in that collection through the Firestore Emulator.
+- The vue interface allows you to add a new document to firestore by filling the form. You can retrieve the information of that form and the ones that are in the cloud with the section that is below, which uses a cloud function.
+- The data of the charts is hardcoded but the use of sending and receiving dara is in the admin section
 
 #### **API KEYS**
 apiKey: 'AIzaSyAHAij4Xf0nEQoGYWd-aYNMNA3lCtEpX20',
