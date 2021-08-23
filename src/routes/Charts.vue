@@ -1,74 +1,48 @@
 <template>
-  <v-container>
-    <v-card elevation="2">
-      <v-card-title>Sales Graph</v-card-title>
-      <line-chart
-        :chart-data="datacollection"
-        :options="chartOptions"
-      ></line-chart>
-    </v-card>
-  </v-container>
+  <section class="charts">
+    <div class="line-chart">
+      <myLineChart></myLineChart>
+    </div>
+    <div class="heatmap">
+      <myHeatMap></myHeatMap>
+    </div>
+  </section>
 </template>
 
 <script>
-import LineChart from "../LineCharts";
+import Controller from "@/mixins/controller";
+import myLineChart from "../components/SalesChart.vue";
+import myHeatMap from "../components/HeatMap.vue";
 
-export default {
-  name: "AQIChartComponent",
-  components: {
-    LineChart,
-  },
-  data() {
-    return {
-      datacollection: {
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April"
-        ],
-        datasets: [
-          {
-            data: [5, 2, 4, 3],
-            label: "Product 1",
-            borderColor: "#3e95cd",
-            fill: false,
-          },
-          {
-            data: [3, 3, 4, 4],
-            label: "Product 2",
-            borderColor: "#8e5ea2",
-            fill: false,
-          },
-          {
-            data: [0, 3, 1, 3],
-            label: "Product 3",
-            borderColor: "#3cba9f",
-            fill: false,
-          }
-        ],
-      },
-      chartOptions: {
-        responsive: true,
-        legend: {
-          display: true,
-        },
-        tooltips: {
-          titleFontSize: 20,
-          bodyFontSize: 25,
-        },
-        scales: {
-          xAxes: [],
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: false,
-              },
-            },
-          ],
-        },
-      },
+class Charts extends Controller {
+  constructor(name, subComponentList = []) {
+    super(name, subComponentList);
+    this.vm = {};
+    this.components = {
+      //include component
+      myLineChart,
+      myHeatMap
     };
-  },
-};
+  }
+}
+export default new Charts("Charts");
 </script>
+
+<style scoped>
+.line-chart {
+  max-height: 45%;
+  max-width: 45%;
+}
+.heatmap{
+  max-height: 45%;
+  max-width: 45%;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.charts{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+}
+</style>

@@ -4,8 +4,7 @@ var cors = require('cors')
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Axios from 'axios'
-//import {firebase} from 'firebase'
-//import { functions } from 'firebase-functions'
+//import ApexCharts from 'apexcharts'
 import Firebase from 'firebase'
 import VueFire from 'vuefire'
 
